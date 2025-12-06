@@ -5,19 +5,14 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("styles");
   eleventyConfig.addPassthroughCopy("itemInfo");
 
-  eleventyConfig.addShortcode("item", function(itemName, imageName, itemInfo){
-      var itemInfoContents = "";
-      fetch(itemInfo)
-        .then((res) => res.text())
-        .then((text) => itemInfoContents = text.toString())
-        .catch((e) => console.log(e));
+  eleventyConfig.addShortcode("item", async function(itemName, imageName, itemInfo){
 
       return ( `
           <div class="item">
           <img src="${imageName}" alt="Image of ${itemName}" class="itemImage">  
           <div class="itemBlock">
           <strong class="itemHeader">${itemName}</strong>
-          <p class="itemInfo">${itemInfoContents.toString()}</p>
+          <p class="itemInfo">${itemInfo}</p>
           </div>
           </div>
           `
