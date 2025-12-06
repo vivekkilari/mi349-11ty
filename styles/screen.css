@@ -1,7 +1,7 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
+    color: #F8F0FB;
+    background: #211A1D;
     padding: 0 40px;
     text-align: center;
 
@@ -15,7 +15,7 @@ nav {
     margin: 40px auto 0 auto;
     border-radius: 50px;
     max-width: 50%;
-    background: #212431;
+    background: #F8F0FB;
 }
 
 nav ul {
@@ -37,10 +37,14 @@ nav ul li {
 nav ul li a {
     display: inline-block;
     padding: 20px;
-    color: #EAE8FF;
+    color: #6320EE;
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #8075FF;
 }
 
 footer {
@@ -51,18 +55,25 @@ footer {
 h1 {
     font-size: 8em;
     letter-spacing: -2px;
+    margin: auto auto;
 }
 
 h1 strong {
     background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background: linear-gradient(45deg, #6320EE 0%, #8075FF 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+h2 {
+    font-size: 6em;
+    letter-spacing: -2px;
+}
+
 p {
-    font-spacing: 1rem;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 2rem;
 }
 
 .item {
@@ -86,8 +97,9 @@ p {
 }
 
 .itemImage {
-    object-fit: contain;
+    object-fit: cover;
     max-height: 80%;
+    max-width: 60%;
     border-style: solid;
     border-width: 5px;
     border-color: white;
@@ -102,4 +114,20 @@ p {
 
 .itemInfo {
     text-align: left;
+}
+
+.itemList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemList a {
+    color: #6320EE;
+    text-decoration: none;
+}
+
+.itemList a:hover {
+    color: #8075FF;
 }
